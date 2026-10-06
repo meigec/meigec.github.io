@@ -1,0 +1,322 @@
+/* ============================================================
+   Eduardo Garcia Meier — CV
+   Palette: Navy #1F2A44 · Slate #4A5568 · Accent #2B6CB0 · White
+   ============================================================ */
+
+:root {
+  --navy:   #1F2A44;
+  --slate:  #4A5568;
+  --accent: #2B6CB0;
+  --white:  #FFFFFF;
+  --rule:   #E2E8F0;
+  --soft:   #F7FAFC;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Lato', Calibri, Arial, sans-serif;
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--navy);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--white);
+  padding: 3.5rem 0 2rem;
+  border-bottom: 3px solid var(--navy);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero h1 {
+  margin: 0 0 0.35rem;
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.role {
+  margin: 0 0 0.75rem;
+  font-size: 12pt;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 10.5pt;
+  color: var(--slate);
+  line-height: 1.5;
+  max-width: 46ch;
+}
+
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 9.5pt;
+}
+
+.contact li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--slate);
+}
+
+.contact .label {
+  display: inline-block;
+  min-width: 68px;
+  font-weight: 600;
+  color: var(--slate);
+  text-transform: uppercase;
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+}
+
+.contact a {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.contact a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section:last-of-type { border-bottom: none; }
+
+.section h2 {
+  font-size: 12pt;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.summary {
+  margin: 0;
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: var(--slate);
+}
+
+/* ---------- Competencies ---------- */
+.competencies {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 2rem;
+}
+
+.competencies li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 10.5pt;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.competencies li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ---------- Jobs ---------- */
+.job {
+  margin-bottom: 1.75rem;
+}
+
+.job:last-child { margin-bottom: 0; }
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.job-header h3 {
+  margin: 0;
+  font-size: 12pt;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.job-title {
+  margin: 0.15rem 0 0;
+  font-size: 10pt;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.dates {
+  font-size: 9.5pt;
+  font-weight: 500;
+  color: var(--slate);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.job ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.job li {
+  margin-bottom: 0.45rem;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: var(--slate);
+}
+
+.job li strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ---------- Skills ---------- */
+.skills { margin: 0; }
+
+.skills dt {
+  font-weight: 700;
+  font-size: 9.5pt;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.85rem;
+}
+
+.skills dt:first-child { margin-top: 0; }
+
+.skills dd {
+  margin: 0.2rem 0 0;
+  font-size: 10.5pt;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+/* ---------- Lists (certs, projects, metrics, languages) ---------- */
+.certs,
+.projects,
+.metrics,
+.languages {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.certs li,
+.projects li,
+.metrics li,
+.languages li {
+  margin-bottom: 0.4rem;
+  font-size: 10.5pt;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+.certs li strong,
+.metrics li strong,
+.languages li strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.projects a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.projects a:hover { border-color: var(--accent); }
+
+.edu {
+  margin: 0;
+  font-size: 10.5pt;
+  color: var(--slate);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  font-size: 9pt;
+  color: var(--slate);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .container { padding: 0 1.25rem; }
+  .hero { padding: 2.5rem 0 1.5rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .hero h1 { font-size: 20pt; }
+  .competencies { grid-template-columns: 1fr; }
+  .job-header { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+}
+
+/* ---------- Print (PDF export) ---------- */
+@media print {
+  @page { margin: 1.2cm 1.4cm; }
+  body { font-size: 10pt; color: #000; background: #fff; }
+  .hero { padding: 0 0 0.75rem; border-bottom: 2px solid var(--navy); }
+  .section { padding: 0.85rem 0; page-break-inside: avoid; }
+  .job { page-break-inside: avoid; }
+  .footer, .contact a[href^="http"]::after { display: none; }
+  a { color: #000; border: none; }
+  .container { padding: 0; max-width: 100%; }
+  .section h2 { font-size: 11pt; }
+  .role { font-size: 11pt; }
+}
