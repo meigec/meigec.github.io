@@ -1,8 +1,3 @@
-/* ============================================================
-   Eduardo Garcia Meier — CV
-   Palette: Navy #1F2A44 · Slate #4A5568 · Accent #2B6CB0 · White
-   ============================================================ */
-
 :root {
   --navy:   #1F2A44;
   --slate:  #4A5568;
@@ -35,7 +30,6 @@ body {
   padding: 0 2rem;
 }
 
-/* ---------- Hero ---------- */
 .hero {
   background: var(--white);
   padding: 3.5rem 0 2rem;
@@ -111,7 +105,6 @@ body {
   border-color: var(--accent);
 }
 
-/* ---------- Sections ---------- */
 .section {
   padding: 2rem 0;
   border-bottom: 1px solid var(--rule);
@@ -138,7 +131,6 @@ body {
   color: var(--slate);
 }
 
-/* ---------- Competencies ---------- */
 .competencies {
   list-style: none;
   padding: 0;
@@ -167,7 +159,6 @@ body {
   border-radius: 50%;
 }
 
-/* ---------- Jobs ---------- */
 .job {
   margin-bottom: 1.75rem;
 }
@@ -225,7 +216,6 @@ body {
   font-weight: 700;
 }
 
-/* ---------- Skills ---------- */
 .skills { margin: 0; }
 
 .skills dt {
@@ -246,7 +236,6 @@ body {
   line-height: 1.5;
 }
 
-/* ---------- Lists (certs, projects, metrics, languages) ---------- */
 .certs,
 .projects,
 .metrics,
@@ -288,7 +277,6 @@ body {
   color: var(--slate);
 }
 
-/* ---------- Footer ---------- */
 .footer {
   padding: 1.5rem 0;
   border-top: 1px solid var(--rule);
@@ -297,7 +285,6 @@ body {
   color: var(--slate);
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 640px) {
   .container { padding: 0 1.25rem; }
   .hero { padding: 2.5rem 0 1.5rem; }
@@ -307,16 +294,89 @@ body {
   .job-header { flex-direction: column; align-items: flex-start; gap: 0.15rem; }
 }
 
-/* ---------- Print (PDF export) ---------- */
 @media print {
   @page { margin: 1.2cm 1.4cm; }
   body { font-size: 10pt; color: #000; background: #fff; }
   .hero { padding: 0 0 0.75rem; border-bottom: 2px solid var(--navy); }
   .section { padding: 0.85rem 0; page-break-inside: avoid; }
   .job { page-break-inside: avoid; }
-  .footer, .contact a[href^="http"]::after { display: none; }
+  .footer { display: none; }
+  .support-section { display: none; }
   a { color: #000; border: none; }
   .container { padding: 0; max-width: 100%; }
   .section h2 { font-size: 11pt; }
   .role { font-size: 11pt; }
+}
+
+.support-section {
+  background: var(--soft);
+  padding: 2.25rem 2rem;
+  margin: 2rem 0 0;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+
+.support-section h2 {
+  border-bottom-color: var(--accent);
+}
+
+.support-intro {
+  margin: 0 0 1.25rem;
+  font-size: 10pt;
+  color: var(--slate);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.support {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.support li {
+  margin: 0;
+}
+
+.support a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.support a:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(43, 108, 176, 0.08);
+  transform: translateY(-1px);
+}
+
+.support-name {
+  font-size: 11pt;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.support-desc {
+  font-size: 9pt;
+  color: var(--slate);
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  .support {
+    grid-template-columns: 1fr;
+  }
+  .support-section {
+    padding: 1.75rem 1.25rem;
+  }
 }
