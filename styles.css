@@ -306,6 +306,7 @@ body {
   .container { padding: 0; max-width: 100%; }
   .section h2 { font-size: 11pt; }
   .role { font-size: 11pt; }
+  .lang-switch { display: none; }
 }
 
 .support-section {
@@ -379,4 +380,32 @@ body {
   .support-section {
     padding: 1.75rem 1.25rem;
   }
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 9pt;
+}
+
+.lang-switch a {
+  color: var(--slate);
+  text-decoration: none;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.lang-switch a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.lang-switch a.active {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
 }
