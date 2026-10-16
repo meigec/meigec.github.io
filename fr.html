@@ -43,7 +43,7 @@
   <section class="section">
     <h2>Résumé Exécutif</h2>
     <p class="summary">
-      Ingénieur Cloud/DevSecOps avec plus de 7 ans de leadership technique hands-on sur des environnements SaaS et on-premise pour des plateformes bancaires et d'entreprise. Spécialisé dans la définition des standards de plateforme, la gouvernance CI/CD et l'Infrastructure as Code avec Terraform, avec la direction d'initiatives de maturité basées sur DORA ayant amélioré la fréquence de déploiement et réduit le taux d'échec sur plusieurs cellules de développement. Solide expérience en orchestration Kubernetes, observabilité (Prometheus, Grafana), ingénierie de fiabilité (SLIs/SLOs, error budgets) et pratiques FinOps pour équilibrer coût et performance. Historique prouvé d'impact mesurable : provisionnement 80% plus rapide, 99.95% de disponibilité, MTTD réduit de 15 à 2 minutes et temps de déploiement de 15 à 3 minutes.
+      Ingénieur Cloud/DevSecOps avec plus de 7 ans de leadership technique hands-on sur des environnements SaaS et on-premise pour des plateformes bancaires et d'entreprise. Spécialisé dans la définition des standards de plateforme, la gouvernance CI/CD et l'Infrastructure as Code avec Terraform, avec la direction d'initiatives de maturité basées sur DORA ayant amélioré la fréquence de déploiement et réduit le taux d'échec sur plusieurs cellules de développement. Solide expérience en orchestration Kubernetes, isolation multi-tenant (namespaces, node pools, RBAC, NetworkPolicies), observabilité (Prometheus, Grafana), ingénierie de fiabilité (SLIs/SLOs, error budgets) et pratiques FinOps pour équilibrer coût et performance. Historique prouvé d'impact mesurable : provisionnement 80% plus rapide, 99.95% de disponibilité, MTTD réduit de 15 à 2 minutes et temps de déploiement de 15 à 3 minutes.
     </p>
   </section>
 
@@ -87,6 +87,7 @@
       <ul>
         <li>Conception et mise en œuvre d'infrastructures évolutives et sécurisées sur GCP (VPC, load balancers, IAM, GKE, Cloud SQL, Artifact Registry), réduisant le temps de provisionnement de <strong>80%</strong> grâce à Terraform modulaire avec workspaces par environnement et revues de configuration pré-déploiement.</li>
         <li>Administration de clusters GKE supportant des microservices avec <strong>99.95% de disponibilité</strong>, via auto-réparation (pod probes, node auto-repair, MIGs), auto-scaling et stratégies de déploiement blue/green ou canary.</li>
+        <li>Exploitation d'un cluster Kubernetes multi-tenant servant plusieurs clients d'entreprise, isolant chaque tenant dans des namespaces et node pools dédiés avec RBAC, NetworkPolicies et Resource Quotas pour garantir la séparation des données et éviter les effets noisy-neighbor.</li>
         <li>Déploiement et maintenance de services sur Kubernetes (GKE) avec Helm et sur Cloud Run pour architectures microservices et microfrontends, en utilisant Istio comme service mesh si nécessaire et NGINX pour l'ingress.</li>
         <li>Construction et maintenance de pipelines CI/CD avec GitLab et ArgoCD, réduisant le temps de déploiement de <strong>15 à 5 minutes</strong> tout en permettant des releases sans downtime.</li>
         <li>Administration d'Istio service mesh pour appliquer mTLS, implémenter le traffic splitting pour les déploiements canary et améliorer l'observabilité entre microservices.</li>
