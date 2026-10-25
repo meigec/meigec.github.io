@@ -374,21 +374,32 @@ body {
 }
 
 @media print {
-  @page { size: A4; margin: 1.2cm 1.4cm; }
+  @page { size: A4; margin: 1.1cm 1.3cm; }
   html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body { font-size: 10pt; color: #000; background: #fff; }
-  .hero { padding: 0 0 0.75rem; border-bottom: 1.5px solid #000; }
-  .section { padding: 0.85rem 0; border-bottom: 1px solid #4A5568; }
-  .section h2 { font-size: 12pt; break-after: avoid; page-break-after: avoid; }
-  .subhead, .job-header { break-after: avoid; page-break-after: avoid; }
-  .job, .job li, .certs li, .skills dd, .earlier li, .edu-list li, .volunteer li, .metrics li, .projects li {
+  body { font-size: 9.5pt; line-height: 1.4; color: #000; background: #fff; }
+  .container { padding: 0; max-width: 100%; }
+  .hero { padding: 0 0 0.6rem; border-bottom: 1.5px solid var(--title); }
+  .hero h1 { font-size: 19pt; }
+  .role { font-size: 11pt; margin-bottom: 0.4rem; }
+  .section { padding: 0.6rem 0; border-bottom: 1px solid #4A5568; }
+  .section h2 { font-size: 11.5pt; margin-bottom: 0.55rem; break-after: avoid; page-break-after: avoid; }
+  .summary, .job li, .skills dd, .certs li, .projects li, .metrics li, .languages li,
+  .earlier li, .edu-list li, .volunteer li, .competencies li { font-size: 9.5pt; }
+  .summary + .summary { margin-top: 0.45rem; }
+  .job { margin-bottom: 0.9rem; }
+  .job li { margin-bottom: 0.25rem; }
+  .job-header h3 { font-size: 11.5pt; }
+  .skills dt { margin-top: 0.5rem; }
+  /* Long jobs may continue on the next page; headings stay with their first line,
+     and single bullets or entries are never split. */
+  .section h2, .subhead, .job-header { break-after: avoid; page-break-after: avoid; }
+  .job li, .certs li, .skills dt, .skills dd, .earlier li, .edu-list li, .volunteer li,
+  .metrics li, .projects li, .languages li {
     break-inside: avoid;
     page-break-inside: avoid;
   }
+  .skills dt { break-after: avoid; page-break-after: avoid; }
   .footer { display: none; }
   .lang-switch { display: none; }
   a { color: #000; border: none; text-decoration: none; }
-  .container { padding: 0; max-width: 100%; }
-  .role { font-size: 11pt; }
-  .job-header h3 { font-size: 12pt; }
 }
