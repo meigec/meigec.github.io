@@ -265,14 +265,15 @@ body {
 }
 
 .projects a {
-  color: #000;
+  color: var(--title);
   font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s;
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
 }
 
-.projects a:hover { border-color: var(--accent); }
+.projects a:hover { color: var(--accent); }
 
 .edu {
   margin: 0;
@@ -402,4 +403,6 @@ body {
   .footer { display: none; }
   .lang-switch { display: none; }
   a { color: #000; border: none; text-decoration: none; }
+  /* Project and publication links keep their link look in the PDF. */
+  .projects a { color: var(--title); text-decoration: underline; }
 }
