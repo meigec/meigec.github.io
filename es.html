@@ -89,8 +89,9 @@
       </header>
       <p class="job-note">Incorporación reciente; contribuyo a una plataforma multicliente ya establecida.</p>
       <ul>
-        <li>Contribuyo al diseño y la operación de infraestructura en GCP (VPC, balanceadores de carga, IAM, GKE, Cloud SQL, Artifact Registry) con Terraform modular, <em>workspaces</em> por entorno y revisiones de configuración previas al despliegue.</li>
-        <li>Ejecuto la CI/CD de infraestructura con GitLab CI y aprovisiono recursos de GCP mediante módulos reutilizables de Terraform.</li>
+        <li>Contribuyo al diseño y la operación de infraestructura en GCP (VPC, balanceadores de carga, IAM, GKE, Cloud SQL, Artifact Registry) con infraestructura como código modular (primero con Terraform, hoy migrada a OpenTofu), <em>workspaces</em> por entorno y revisiones de configuración previas al despliegue.</li>
+        <li>Ejecuto la CI/CD de infraestructura con GitLab CI y aprovisiono recursos de GCP mediante módulos reutilizables de OpenTofu.</li>
+        <li>Contribuyo a una iniciativa en curso para impulsar el aprovisionamiento con OpenTofu a partir de definiciones en YAML, un paso hacia el aprovisionamiento de infraestructura mediante agentes de IA (<em>agentic</em>).</li>
         <li>Administro clústeres GKE que soportan microservicios con alta disponibilidad, mediante autorreparación (<em>probes</em> de pods, reparación automática de nodos, MIG), autoescalado y estrategias de despliegue <em>blue/green</em> o <em>canary</em>.</li>
         <li>Opero una plataforma GKE <em>multi-tenant</em> que da servicio a varios clientes empresariales; cada cliente se aísla con <em>namespaces</em> y grupos de nodos dedicados, RBAC, NetworkPolicies y ResourceQuotas para separar los datos y evitar el efecto <em>noisy neighbor</em>.</li>
         <li>Despliego y mantengo servicios en GKE con Helm y en Cloud Run para arquitecturas de microservicios y microfrontends, con Istio (mTLS, división de tráfico para lanzamientos <em>canary</em>) e <em>ingress</em> NGINX.</li>
@@ -193,7 +194,7 @@
       <dt>Contenedores</dt>
       <dd>Kubernetes (GKE, EKS), Docker, Helm, Istio, NGINX Ingress, Minikube</dd>
       <dt>Infraestructura como código</dt>
-      <dd>Terraform, Terragrunt, Ansible (pruebas de concepto), Terratest (pruebas de concepto)</dd>
+      <dd>Terraform, OpenTofu, Terragrunt, Ansible (pruebas de concepto), Terratest (pruebas de concepto)</dd>
       <dt>CI/CD y GitOps</dt>
       <dd>Jenkins (<em>pipelines</em> declarativos, Jenkinsfile, trabajos parametrizados), CloudBees CD, Spinnaker, GitLab CI, GitHub Actions (proyectos personales), Argo CD, Bitbucket, Gitflow</dd>
       <dt>DevSecOps</dt>

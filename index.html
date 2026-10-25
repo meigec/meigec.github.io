@@ -89,8 +89,9 @@
       </header>
       <p class="job-note">Recently joined; contributing to an established multi-client platform.</p>
       <ul>
-        <li>Contribute to the design and operation of GCP infrastructure (VPCs, load balancers, IAM, GKE, Cloud SQL, Artifact Registry) using modular Terraform with per-environment workspaces and pre-deployment configuration reviews.</li>
-        <li>Run infrastructure CI/CD with GitLab CI, provisioning GCP resources through reusable Terraform modules.</li>
+        <li>Contribute to the design and operation of GCP infrastructure (VPCs, load balancers, IAM, GKE, Cloud SQL, Artifact Registry) using modular infrastructure as code (started with Terraform, now migrated to OpenTofu) with per-environment workspaces and pre-deployment configuration reviews.</li>
+        <li>Run infrastructure CI/CD with GitLab CI, provisioning GCP resources through reusable OpenTofu modules.</li>
+        <li>Contribute to an ongoing initiative to drive OpenTofu provisioning from YAML definitions, a step toward agentic infrastructure provisioning.</li>
         <li>Manage GKE clusters supporting microservices with high availability, using self-healing (pod probes, node auto-repair, MIGs), autoscaling, and blue/green or canary deployment strategies.</li>
         <li>Operate a multi-tenant GKE platform serving several enterprise clients, where each tenant is isolated with dedicated namespaces and node pools, RBAC, NetworkPolicies, and ResourceQuotas to keep data separated and prevent noisy-neighbor effects.</li>
         <li>Deploy and maintain services on GKE with Helm and on Cloud Run for microservice and micro-frontend architectures, with Istio (mTLS, traffic splitting for canary releases) and NGINX Ingress.</li>
@@ -193,7 +194,7 @@
       <dt>Containers</dt>
       <dd>Kubernetes (GKE, EKS), Docker, Helm, Istio, NGINX Ingress, Minikube</dd>
       <dt>Infrastructure as Code</dt>
-      <dd>Terraform, Terragrunt, Ansible (proofs of concept), Terratest (proofs of concept)</dd>
+      <dd>Terraform, OpenTofu, Terragrunt, Ansible (proofs of concept), Terratest (proofs of concept)</dd>
       <dt>CI/CD &amp; GitOps</dt>
       <dd>Jenkins (declarative pipelines, Jenkinsfile, parameterized jobs), CloudBees CD, Spinnaker, GitLab CI, GitHub Actions (personal projects), Argo CD, Bitbucket, Gitflow</dd>
       <dt>DevSecOps</dt>
